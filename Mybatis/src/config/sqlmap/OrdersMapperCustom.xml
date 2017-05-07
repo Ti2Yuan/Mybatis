@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mybatis.mapinterface.OrdersMapperCustom">
+
+  <!-- 定义查询订单关联查询用户信息的resultMap,将整个查询结果映射到com.chen.mybatis.po.Orders中 -->
+  <resultMap type="com.chen.mybatis.po.Orders" id="OrdersUserResultMap">
+    <id column="id" property="id"/>
+    <result column="user_id" property="userId"/>
+    <result column="count" property="count"/>
+    <result column="createtime" property="createtime"/>
+    <result column="note" property="note"/>
+    
+    <!-- resultMap可以实现高级映射（使用association、collection实现一对一及一对多映射），association、collection具备延迟加载功能。 
+需求： 
+如果查询订单并且关联查询用户信息。如果先查询订单信息即可满足要求，当我们需要查询用户信息时再查询用户信息。把对用户信息的按需去查询就是延迟加载。
+延迟加载：先从单表查询、需要时再从关联表去关联查询，大大提高 数据库性能，因为查询单表要比关联查询多张表速度要快。
+     -->
+    <association property="user" javaType="com.chen.mybatis.po.User">
+      <id column="user_id" property="id"/>
+      <result column="username" property="username"/>
+      <result column="sex" property="sex"/>
+      <result column="address" property="address"/>
+      <result column="birthday" property="birthday"/>
+    </association>
+  </resultMap>
+  
+  <!-- 定义查询订单及订单明细信息的resultMap使用extends继承，不用再重新配置订单信息和用户信息的映射 -->
+  <resultMap type="com.chen.mybatis.po.Orders" id="OrdersAndOrderDetailResultMap" extends="OrdersUserResultMap">
+     <!-- 订单信息 -->
+        <!-- 用户信息 -->
+        <!-- 使用extends继承，不用再重配置订单信息和用户信息的映射 -->
+        <!-- 订单明细信息
+        一个订单关联查询出了多条明细，要使用collection进行映射
+        collection：对关联查询到多条记录映射到集合对象中
+        property：将关联查询到多条记录映射到cn.zhisheng.mybatis.po.Orders哪个属性
+        ofType：指定映射到list集合属性中pojo的类型
+         -->
+     <collection property="orderdetails" ofType="com.chen.mybatis.po.Orderdetail">
+       <id column="orderdetail_id" property="id"/>
+       <result column="items_id" property="items_id"/>
+       <result column="orders_id" property="orders_id"/>
+       <result column="items_num" property="items_num"/>
+     </collection>
+  </resultMap>
+  
+  <select id="findOrdersAndOrderDetailResultMap" resultMap="OrdersAndOrderDetailResultMap">
+    SELECT orders.*, user.username, user.sex, user.address, orderdetail.id orderdetail_id, orderdetail.items_id, orderdetail.items_num, orderdetail.orders_id
+        FROM orders, user,orderdetail WHERE orders.user_id = user.id AND orderdetail.orders_id=orders.id
+  </select>
+
+  <select id="findOrdersUserResultMap" resultMap="OrdersUserResultMap">
+    select orders.*, user.username, user.sex, user.address from orders, user where orders.user_id = user.id; 
+  </select>
+
+  <select id="findOrdersUser" resultType="com.chen.mybatis.po.OrderCustom">
+    select orders.*, user.username, user.sex, user.address from orders, user where orders.user_id = user.id; 
+  </select>
+</mapper>

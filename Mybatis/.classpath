@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/asm-6.0_ALPHA.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/cglib-3.2.4.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Log4J/apache-log4j-2.7-bin/apache-log4j-2.7-bin/log4j-api-2.7.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Log4J/apache-log4j-2.7-bin/apache-log4j-2.7-bin/log4j-core-2.7.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Mybatis/mybatis-3.4.1/mybatis-3.4.1/mybatis-3.4.1.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/mysql-connector-java-5.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Log4J/apache-log4j-2.7-bin/apache-log4j-2.7-bin/log4j-1.2-api-2.7.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/slf4j-api-1.7.19.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/junit-4.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
