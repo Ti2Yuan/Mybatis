@@ -14,5 +14,9 @@
 	<classpathentry kind="lib" path="F:/LibrarySet/slf4j-api-1.7.19.jar"/>
 	<classpathentry kind="lib" path="F:/LibrarySet/slf4j-log4j12-1.7.7.jar"/>
 	<classpathentry kind="lib" path="F:/LibrarySet/junit-4.7.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/mybatis-spring-1.3.1.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-context-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Aspectj/aspectjweaver-1.8.10.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-jdbc-4.3.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
