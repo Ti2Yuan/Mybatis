@@ -16,11 +16,11 @@
      <setting name="aggressiveLazyLoading" value="false"/>  <!-- 当设置为true的时候，懒加载的对象可能被任何懒属性全部加载。否则，每个属性都按需加载 -->
    </settings>
    <!-- 和spring整合后 environments配置将被废除 -->
-   <environments default="development">
+   <!-- <environments default="development">
       <environment id="development">
-         <!-- 使用jdbc事务管理，事务由Mybatis控制 -->
+         使用jdbc事务管理，事务由Mybatis控制
          <transactionManager type="JDBC"/>
-         <!-- 数据库连接池，由Mybatis管理，数据库名是mybatis -->
+         数据库连接池，由Mybatis管理，数据库名是mybatis
          <dataSource type="POOLED">
            <property name="driver" value="com.mysql.jdbc.Driver"/>
            <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"/>
@@ -28,7 +28,7 @@
            <property name="password" value="root"/>
          </dataSource>
       </environment>
-   </environments>
+   </environments> -->
    
    
    <mappers>

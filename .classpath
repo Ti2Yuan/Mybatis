@@ -18,5 +18,11 @@
 	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-context-4.3.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="F:/LibrarySet/Aspectj/aspectjweaver-1.8.10.jar"/>
 	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-jdbc-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-aop-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-beans-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-core-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-expression-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-orm-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/LibrarySet/Spring/libs/spring-tx-4.3.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
